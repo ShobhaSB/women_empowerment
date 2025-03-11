@@ -3,113 +3,251 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Empowered Queen</title>
+    <title>Women Empowerment - India</title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap');
         body {
-            font-family: 'Playfair Display', serif;
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f8ff; /* Light blue background */
+            color: #333;
+            scroll-behavior: smooth; /* Smooth scrolling */
+        }
+        /* Navigation Bar */
+        .navbar {
+            background-color: #1e90ff; /* Dodger blue */
+            padding: 15px 20px;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        .navbar h1 {
+            margin: 0;
+            font-size: 1.8em;
+        }
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 1.1em;
+        }
+        .navbar a:hover {
+            text-decoration: underline;
+        }
+        /* Hero Section */
+        .hero {
+            background-image: url('https://images.unsplash.com/photo-1614854262318-831574f15f1f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');
+            background-size: cover;
+            background-position: center;
+            padding: 100px 20px;
+            color: white;
             text-align: center;
-            padding: 50px;
-            background: linear-gradient(to right, #2c3e50, #34495e);
-            color: #f1c40f;
-            text-shadow: 2px 2px 5px #d4ac0d;
-            animation: fadeIn 1s ease-in-out;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+        }
+        .hero h2 {
+            font-size: 2.5em;
+            margin: 0;
+        }
+        .hero p {
+            font-size: 1.2em;
+            margin: 20px 0;
+        }
+        /* Interactive Section */
+        .input-section {
+            text-align: center;
+            padding: 40px 20px;
+            background-color: white;
+        }
+        .input-section input {
+            padding: 10px;
+            font-size: 1em;
+            border: 2px solid #1e90ff; /* Dodger blue */
+            border-radius: 5px;
+            width: 250px;
+        }
+        .input-section button {
+            padding: 10px 20px;
+            font-size: 1em;
+            background-color: #1e90ff; /* Dodger blue */
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-left: 10px;
+        }
+        .input-section button:hover {
+            background-color: #0077cc; /* Darker blue */
+        }
+        .personalized-message {
+            font-size: 1.5em;
+            margin: 20px auto;
+            color: #ff6f61; /* Coral color */
+            font-weight: bold;
+            animation: fadeIn 2s;
+            padding: 20px;
+            background-color: #fff3f5; /* Light coral background */
+            border-radius: 10px;
+            display: inline-block;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            text-align: center;
+        }
+        .share-buttons {
+            margin-top: 20px;
+            text-align: center;
+        }
+        .share-buttons button {
+            padding: 10px 20px;
+            font-size: 1em;
+            background-color: #1e90ff; /* Dodger blue */
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 5px;
+        }
+        .share-buttons button:hover {
+            background-color: #0077cc; /* Darker blue */
+        }
+        /* Did You Know Section */
+        .did-you-know {
+            padding: 40px 20px;
+            background-color: #e6f3ff; /* Light blue */
+            text-align: center;
+        }
+        .did-you-know h2 {
+            color: #1e90ff; /* Dodger blue */
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+        .did-you-know p {
+            font-size: 1.2em;
+            color: #555;
+            margin: 10px 0;
+        }
+        /* Footer */
+        .footer {
+            background-color: #1e90ff; /* Dodger blue */
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+        }
+        .footer a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        .footer a:hover {
+            text-decoration: underline;
+        }
+        .social-icons {
+            margin-top: 10px;
+        }
+        .social-icons a {
+            margin: 0 10px;
+        }
+        .social-icons img {
+            width: 30px;
+            height: 30px;
         }
         @keyframes fadeIn {
             from { opacity: 0; }
             to { opacity: 1; }
         }
-        input, button {
-            padding: 12px;
-            font-size: 18px;
-            margin-top: 10px;
-            border: 2px solid #f1c40f;
-            background: linear-gradient(135deg, #9b59b6, #8e44ad);
-            color: #ffffff;
-            font-weight: bold;
-            cursor: pointer;
-            box-shadow: 0 0 10px #f1c40f;
-            transition: transform 0.3s ease-in-out, background 0.3s;
-            border-radius: 12px;
-        }
-        button:hover {
-            transform: scale(1.1);
-            background: linear-gradient(135deg, #8e44ad, #9b59b6);
-        }
-        .message {
-            font-size: 24px;
-            font-weight: bold;
-            margin-top: 20px;
-            text-transform: uppercase;
-            animation: pulse 1s infinite alternate;
-            color: #f39c12;
-        }
-        @keyframes pulse {
-            0% { text-shadow: 0 0 10px #f39c12, 0 0 20px #ffffff; }
-            100% { text-shadow: 0 0 15px #f39c12, 0 0 30px #ffffff; }
-        }
-        .icon {
-            font-size: 32px;
-        }
-        .crown {
-            display: none;
-            font-size: 50px;
-            margin-top: 10px;
-            animation: crownAppear 0.8s ease-in-out;
-        }
-        @keyframes crownAppear {
-            from { transform: scale(0); opacity: 0; }
-            to { transform: scale(1); opacity: 1; }
-        }
-        .share-btn {
-            margin-top: 20px;
-            padding: 12px 20px;
-            font-size: 18px;
-            background: #f1c40f;
-            color: #2c3e50;
-            font-weight: bold;
-            border: none;
-            cursor: pointer;
-            border-radius: 10px;
-            transition: transform 0.3s, background 0.3s;
-        }
-        .share-btn:hover {
-            transform: scale(1.1);
-            background: #d4ac0d;
-        }
     </style>
 </head>
 <body>
-    <h1>👑 Enter Your Name & Embrace Your Inner Queen 👑</h1>
-    <input type="text" id="nameInput" placeholder="Your Name">
-    <button onclick="showMessage()">✨ Claim Your Power ✨</button>
-    <p class="message" id="message"></p>
-    <p class="crown" id="crown">👑</p>
-    <button class="share-btn" id="shareBtn" style="display: none;" onclick="sharePower()">Share Your Power</button>
+    <!-- Navigation Bar -->
+    <div class="navbar">
+        <h1>Women Empowerment</h1>
+        <div>
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#resources">Resources</a>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <div class="hero" id="home">
+        <h2>Empower Women, Empower India</h2>
+        <p>"When women are empowered, society thrives. Let's build a stronger India together."</p>
+    </div>
+
+    <!-- Interactive Section -->
+    <div class="input-section">
+        <input type="text" id="userName" placeholder="Enter your name">
+        <button onclick="showMessage()">Get Your Message</button>
+    </div>
+    <div id="message" class="personalized-message" style="display: block;"></div>
+    <div class="share-buttons" id="shareButtons" style="display: none;">
+        <button onclick="shareOnTwitter()">Share on Twitter</button>
+        <button onclick="copyToClipboard()">Copy Message</button>
+    </div>
+
+    <!-- Did You Know Section -->
+    <div class="did-you-know">
+        <h2>Did You Know?</h2>
+        <p>🌟 India has over 15 million women entrepreneurs, making it one of the fastest-growing communities of female business owners globally.</p>
+        <p>🌟 The Beti Bachao, Beti Padhao initiative has significantly improved the gender ratio and education for girls in India.</p>
+        <p>🌟 Indian women are breaking barriers in STEM fields, with over 30% of researchers being women.</p>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer" id="resources">
+        <p>© 2023 Women Empowerment. All rights reserved.</p>
+        <div class="social-icons">
+            <a href="https://instagram.com" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram"></a>
+            <a href="https://facebook.com" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/124/124010.png" alt="Facebook"></a>
+            <a href="https://linkedin.com" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn"></a>
+        </div>
+        <p>
+            <a href="#home">Home</a> |
+            <a href="#about">About</a> |
+            <a href="#resources">Resources</a>
+        </p>
+    </div>
 
     <script>
+        // Personalized Message
         function showMessage() {
-            let name = document.getElementById('nameInput').value.trim();
-            if (name === '') {
-                document.getElementById('message').innerHTML = "🚫 Enter your name to be crowned!";
-                document.getElementById('crown').style.display = "none";
-                document.getElementById('shareBtn').style.display = "none";
-                return;
+            const name = document.getElementById('userName').value;
+            if (name) {
+                const messages = [
+                    `Dear ${name}, 🌟 you are a beacon of strength and resilience. Remember, every small step you take today is a giant leap for tomorrow. Keep shining and inspiring others! 💪✨`,
+                    `${name}, your journey is a testament to the power of perseverance. 🌸 Believe in yourself, for you are capable of achieving greatness. The world is waiting for your unique voice! 🗣️🌍`,
+                    `Hello ${name}! 🌟 Your courage and determination are truly inspiring. Never forget that you have the power to change the world. Keep pushing boundaries and breaking stereotypes! 🔥🌈`,
+                    `${name}, you are a force to be reckoned with! 💖 Your strength and kindness make the world a better place. Keep going, and never stop dreaming big. 🚀✨`,
+                    `To ${name}, 🌟 your potential is limitless. Embrace your uniqueness and let your light shine brightly. The world needs more trailblazers like you! 🌸💪`
+                ];
+                const randomMessage = messages[Math.floor(Math.random() * messages.length)];
+                document.getElementById('message').innerText = randomMessage;
+                document.getElementById('shareButtons').style.display = 'block';
+            } else {
+                document.getElementById('message').innerText = "Please enter your name!";
+                document.getElementById('shareButtons').style.display = 'none';
             }
-            
-            let titles = ["Queen of Strength", "Empress of Wisdom", "Warrior of Change", "Goddess of Power", "Ruler of Resilience"];
-            let randomTitle = titles[Math.floor(Math.random() * titles.length)];
-            
-            let message = `👑 ${name}, you are the ${randomTitle}! Wear your crown with pride! 👑`;
-            document.getElementById('message').innerHTML = message;
-            document.getElementById('crown').style.display = "block";
-            document.getElementById('shareBtn').style.display = "inline-block";
         }
 
-        function sharePower() {
-            let text = document.getElementById('message').innerText;
-            let shareUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent(text + ' #EmpoweredQueen')}`;
-            window.open(shareUrl, '_blank');
+        // Share on Twitter
+        function shareOnTwitter() {
+            const message = document.getElementById('message').innerText;
+            const url = encodeURIComponent(window.location.href);
+            const text = encodeURIComponent(`${message} - Join the movement for women's empowerment in India!`);
+            window.open(`https://twitter.com/intent/tweet?text=${text}&url=${url}`, '_blank');
+        }
+
+        // Copy to Clipboard
+        function copyToClipboard() {
+            const message = document.getElementById('message').innerText;
+            navigator.clipboard.writeText(message).then(() => {
+                alert('Message copied to clipboard!');
+            });
         }
     </script>
 </body>
