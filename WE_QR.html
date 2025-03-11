@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unleash Your Power</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap');
+        body {
+            font-family: 'Oswald', sans-serif;
+            text-align: center;
+            padding: 50px;
+            background: linear-gradient(to right, #0044cc, #0088ff);
+            color: #ffffff;
+            text-shadow: 2px 2px 5px #003399;
+        }
+        input, button {
+            padding: 12px;
+            font-size: 18px;
+            margin-top: 10px;
+            border: 2px solid #ffffff;
+            background: #002266;
+            color: #ffffff;
+            font-weight: bold;
+            cursor: pointer;
+            box-shadow: 0 0 10px #ffffff;
+            transition: transform 0.2s ease-in-out, background 0.3s;
+            border-radius: 8px;
+        }
+        button:hover {
+            transform: scale(1.1);
+            background: #0044cc;
+        }
+        .message {
+            font-size: 24px;
+            font-weight: bold;
+            margin-top: 20px;
+            text-transform: uppercase;
+            animation: pulse 1s infinite alternate;
+            color: #ffffff;
+        }
+        @keyframes pulse {
+            0% { text-shadow: 0 0 10px #003399, 0 0 20px #ffffff; }
+            100% { text-shadow: 0 0 15px #003399, 0 0 30px #ffffff; }
+        }
+        .icon {
+            font-size: 30px;
+        }
+        .quote-ticker {
+            margin-top: 30px;
+            font-size: 18px;
+            font-weight: bold;
+            white-space: nowrap;
+            overflow: hidden;
+            width: 100%;
+            color: #fff;
+        }
+        .quote-ticker span {
+            display: inline-block;
+            padding-left: 100%;
+            animation: scrollText 10s linear infinite;
+        }
+        @keyframes scrollText {
+            from { transform: translateX(0%); }
+            to { transform: translateX(-100%); }
+        }
+    </style>
+</head>
+<body>
+    <h1>⚡ Enter Your Name & Unleash Your Power ⚡</h1>
+    <input type="text" id="nameInput" placeholder="Your Name">
+    <button onclick="showMessage()">🔥 Reveal Your Strength 🔥</button>
+    <p class="message" id="message"></p>
+
+    <div class="quote-ticker">
+        <span id="quote">"Believe in yourself. You are braver than you think, stronger than you seem, and smarter than you know."</span>
+    </div>
+
+    <script>
+        function showMessage() {
+            let name = document.getElementById('nameInput').value.trim();
+            if (name === '') {
+                document.getElementById('message').innerHTML = "🚫 Enter your name to unlock your power!";
+                return;
+            }
+            
+            let messages = [
+                `💪 ${name}, you are a force of nature! Rise, conquer, and leave your mark! 💪`,
+                `⚔️ ${name}, your resilience is unmatched! Stand tall and rewrite the rules! ⚔️`,
+                `🔥 ${name}, ignite the fire within! Nothing can stand in your way! 🔥`,
+                `⚡ ${name}, you are unstoppable! Break limits, shatter doubts, and lead the charge! ⚡`,
+                `👑 ${name}, own your power! Be bold, be fearless, and rule your destiny! 👑`
+            ];
+            
+            let randomMessage = messages[Math.floor(Math.random() * messages.length)];
+            document.getElementById('message').innerHTML = `<span class='icon'>💥</span> ${randomMessage} <span class='icon'>💥</span>`;
+        }
+
+        function updateQuote() {
+            let quotes = [
+                "Believe in yourself. You are braver than you think, stronger than you seem, and smarter than you know.",
+                "Success is not final, failure is not fatal: it is the courage to continue that counts.",
+                "The only way to do great work is to love what you do.",
+                "Do not wait for opportunity. Create it.",
+                "Empower yourself, empower the world."
+            ];
+            document.getElementById('quote').textContent = quotes[Math.floor(Math.random() * quotes.length)];
+        }
+
+        setInterval(updateQuote, 5000);
+    </script>
+</body>
+</html>
