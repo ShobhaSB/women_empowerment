@@ -3,33 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Unleash Your Power</title>
+    <title>Empowered Women, Empower the World</title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap');
         body {
-            font-family: 'Oswald', sans-serif;
+            font-family: 'Playfair Display', serif;
             text-align: center;
             padding: 50px;
-            background: linear-gradient(to right, #0044cc, #0088ff);
-            color: #ffffff;
-            text-shadow: 2px 2px 5px #003399;
+            background: linear-gradient(to right, #ff9a9e, #fad0c4);
+            color: #5a2a2a;
+            text-shadow: 2px 2px 5px #d96459;
+            animation: fadeIn 1s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
         }
         input, button {
             padding: 12px;
             font-size: 18px;
             margin-top: 10px;
-            border: 2px solid #ffffff;
-            background: #002266;
+            border: 2px solid #5a2a2a;
+            background: linear-gradient(135deg, #ff758c, #ff7eb3);
             color: #ffffff;
             font-weight: bold;
             cursor: pointer;
-            box-shadow: 0 0 10px #ffffff;
-            transition: transform 0.2s ease-in-out, background 0.3s;
-            border-radius: 8px;
+            box-shadow: 0 0 10px #5a2a2a;
+            transition: transform 0.3s ease-in-out, background 0.3s;
+            border-radius: 12px;
         }
         button:hover {
             transform: scale(1.1);
-            background: #0044cc;
+            background: linear-gradient(135deg, #ff7eb3, #ff758c);
         }
         .message {
             font-size: 24px;
@@ -37,28 +42,28 @@
             margin-top: 20px;
             text-transform: uppercase;
             animation: pulse 1s infinite alternate;
-            color: #ffffff;
+            color: #b22222;
         }
         @keyframes pulse {
-            0% { text-shadow: 0 0 10px #003399, 0 0 20px #ffffff; }
-            100% { text-shadow: 0 0 15px #003399, 0 0 30px #ffffff; }
+            0% { text-shadow: 0 0 10px #b22222, 0 0 20px #ffffff; }
+            100% { text-shadow: 0 0 15px #b22222, 0 0 30px #ffffff; }
         }
         .icon {
-            font-size: 30px;
+            font-size: 32px;
         }
         .quote-ticker {
             margin-top: 30px;
-            font-size: 18px;
+            font-size: 22px;
             font-weight: bold;
             white-space: nowrap;
             overflow: hidden;
             width: 100%;
-            color: #fff;
+            color: #5a2a2a;
         }
         .quote-ticker span {
             display: inline-block;
             padding-left: 100%;
-            animation: scrollText 10s linear infinite;
+            animation: scrollText 8s linear infinite;
         }
         @keyframes scrollText {
             from { transform: translateX(0%); }
@@ -67,29 +72,29 @@
     </style>
 </head>
 <body>
-    <h1>⚡ Enter Your Name & Unleash Your Power ⚡</h1>
+    <h1>🌸 Enter Your Name & Discover Women's Strength 🌸</h1>
     <input type="text" id="nameInput" placeholder="Your Name">
-    <button onclick="showMessage()">🔥 Reveal Your Strength 🔥</button>
+    <button onclick="showMessage()">✨ Get Inspired ✨</button>
     <p class="message" id="message"></p>
 
     <div class="quote-ticker">
-        <span id="quote">"Believe in yourself. You are braver than you think, stronger than you seem, and smarter than you know."</span>
+        <span id="quote">"Empowered women empower the world."</span>
     </div>
 
     <script>
         function showMessage() {
             let name = document.getElementById('nameInput').value.trim();
             if (name === '') {
-                document.getElementById('message').innerHTML = "🚫 Enter your name to unlock your power!";
+                document.getElementById('message').innerHTML = "🚫 Enter your name to see an inspiring quote!";
                 return;
             }
             
             let messages = [
-                `💪 ${name}, you are a force of nature! Rise, conquer, and leave your mark! 💪`,
-                `⚔️ ${name}, your resilience is unmatched! Stand tall and rewrite the rules! ⚔️`,
-                `🔥 ${name}, ignite the fire within! Nothing can stand in your way! 🔥`,
-                `⚡ ${name}, you are unstoppable! Break limits, shatter doubts, and lead the charge! ⚡`,
-                `👑 ${name}, own your power! Be bold, be fearless, and rule your destiny! 👑`
+                `💪 ${name}, "I raise up my voice—not so that I can shout, but so that those without a voice can be heard." – Malala Yousafzai 💪`,
+                `🌟 ${name}, "A woman is like a tea bag—you never know how strong she is until she gets in hot water." – Eleanor Roosevelt 🌟`,
+                `🔥 ${name}, "The most courageous act is still to think for yourself. Aloud." – Coco Chanel 🔥`,
+                `⚡ ${name}, "Do not wait for someone else to come and speak for you. It’s you who can change the world." – Malala Yousafzai ⚡`,
+                `👑 ${name}, "There is no limit to what we, as women, can accomplish." – Michelle Obama 👑`
             ];
             
             let randomMessage = messages[Math.floor(Math.random() * messages.length)];
@@ -98,11 +103,11 @@
 
         function updateQuote() {
             let quotes = [
-                "Believe in yourself. You are braver than you think, stronger than you seem, and smarter than you know.",
-                "Success is not final, failure is not fatal: it is the courage to continue that counts.",
-                "The only way to do great work is to love what you do.",
-                "Do not wait for opportunity. Create it.",
-                "Empower yourself, empower the world."
+                "Empowered women empower the world.",
+                "A strong woman stands up for herself. A stronger woman stands up for others.",
+                "Women are the real architects of society.",
+                "The future belongs to those who believe in the beauty of their dreams.",
+                "Well-behaved women seldom make history."
             ];
             document.getElementById('quote').textContent = quotes[Math.floor(Math.random() * quotes.length)];
         }
